@@ -1,0 +1,611 @@
+{
+  "name": "leaklens",
+  "version": "1.0.0",
+  "category": "data-tool",
+  "license": "MIT",
+  "runtime": "Claude Code, opencode, or any agent runtime that loads SKILL.md files",
+  "description": "50 validated data-exposure hunting skills: authorized scope, discovery over files and repositories, classification by secret and data class, false-positive reduction, reporting and rotation, with a findings-summary-to-handling-plan CLI.",
+  "skill_count": 50,
+  "skills": [
+    {
+      "slug": "authorized-corpus-boundary",
+      "title": "Authorized Corpus Boundary",
+      "path": "skills/authorized-corpus-boundary/SKILL.md",
+      "tags": [
+        "scope",
+        "authorization",
+        "rules-of-engagement"
+      ],
+      "meta_phase": "scope",
+      "sha256": "c474c900b162df56a7eae81754594cce727b2990a1ba8ce1cca114487f43856c"
+    },
+    {
+      "slug": "dataset-inventory-and-provenance",
+      "title": "Dataset Inventory and Provenance",
+      "path": "skills/dataset-inventory-and-provenance/SKILL.md",
+      "tags": [
+        "scope",
+        "inventory",
+        "lineage"
+      ],
+      "meta_phase": "scope",
+      "sha256": "8d1148b1991b8f4c8b282222a7c32a3e947341e8b76d1260ef573767e1b54f32"
+    },
+    {
+      "slug": "data-class-ladder-definition",
+      "title": "Data Class Ladder Definition",
+      "path": "skills/data-class-ladder-definition/SKILL.md",
+      "tags": [
+        "scope",
+        "classification",
+        "policy"
+      ],
+      "meta_phase": "scope",
+      "sha256": "deb5ad3a394c62cf52cd77485d44661c7dd61b667df995de58205330b3cf92d7"
+    },
+    {
+      "slug": "local-only-toolchain-preparation",
+      "title": "Local-Only Toolchain Preparation",
+      "path": "skills/local-only-toolchain-preparation/SKILL.md",
+      "tags": [
+        "scope",
+        "tooling",
+        "data-handling"
+      ],
+      "meta_phase": "scope",
+      "sha256": "85ed382629687b9ebffca431ca7123533e82c3130f482622bffed67e3b54a18d"
+    },
+    {
+      "slug": "synthetic-first-confirmation-rule",
+      "title": "Synthetic First Confirmation Rule",
+      "path": "skills/synthetic-first-confirmation-rule/SKILL.md",
+      "tags": [
+        "scope",
+        "validation",
+        "method"
+      ],
+      "meta_phase": "scope",
+      "sha256": "364d21bd4ea27140bbe6957a5d4e9d8719a95e9b7178c1e898903244b88f0143"
+    },
+    {
+      "slug": "read-only-evidence-capture",
+      "title": "Read-Only Evidence Capture",
+      "path": "skills/read-only-evidence-capture/SKILL.md",
+      "tags": [
+        "scope",
+        "evidence",
+        "redaction"
+      ],
+      "meta_phase": "scope",
+      "sha256": "ca14c0c0305176c756a9d9d7292aff0e17b964d0256a9865d140bab08ee89139"
+    },
+    {
+      "slug": "report-destination-safety",
+      "title": "Report Destination Safety",
+      "path": "skills/report-destination-safety/SKILL.md",
+      "tags": [
+        "scope",
+        "reporting",
+        "handling"
+      ],
+      "meta_phase": "scope",
+      "sha256": "3221f76c80131f9d7a0117d530f0a92d99f6612a816ef6735ed0ccb9d57b59c8"
+    },
+    {
+      "slug": "repository-surface-enumeration",
+      "title": "Repository Surface Enumeration",
+      "path": "skills/repository-surface-enumeration/SKILL.md",
+      "tags": [
+        "discover",
+        "inventory",
+        "repository"
+      ],
+      "meta_phase": "discover",
+      "sha256": "2833b524934b342321fe499c9ea08d22f6315074ea729bef4622c2d6b04429e2"
+    },
+    {
+      "slug": "high-entropy-string-detection",
+      "title": "High-Entropy String Detection",
+      "path": "skills/high-entropy-string-detection/SKILL.md",
+      "tags": [
+        "discover",
+        "entropy",
+        "detection"
+      ],
+      "meta_phase": "discover",
+      "sha256": "3e10d3319b277f400eaf5ea672e12cc745c044d74d0ce11ae3e767cec736bbc7"
+    },
+    {
+      "slug": "known-format-token-identification",
+      "title": "Known-Format Token Identification",
+      "path": "skills/known-format-token-identification/SKILL.md",
+      "tags": [
+        "discover",
+        "detection",
+        "tokens"
+      ],
+      "meta_phase": "discover",
+      "sha256": "55d99d6cf439a50273a257949722d1236017fbe0dff068f1aebd2908d4b6773f"
+    },
+    {
+      "slug": "assignment-and-interpolation-surface",
+      "title": "Assignment and Interpolation Surface",
+      "path": "skills/assignment-and-interpolation-surface/SKILL.md",
+      "tags": [
+        "discover",
+        "detection",
+        "structure"
+      ],
+      "meta_phase": "discover",
+      "sha256": "cec9c49d5d5a3aaedf0a4402950747c30c8220cf2d9fea2aa04ab78b5db3b813"
+    },
+    {
+      "slug": "url-embedded-credential-detection",
+      "title": "URL-Embedded Credential Detection",
+      "path": "skills/url-embedded-credential-detection/SKILL.md",
+      "tags": [
+        "discover",
+        "urls",
+        "credentials"
+      ],
+      "meta_phase": "discover",
+      "sha256": "f15900b6682a3232bd4805000261488f52686cb28f723e71cef85b4bd046af7b"
+    },
+    {
+      "slug": "configuration-and-dotfile-surface",
+      "title": "Configuration and Dotfile Surface",
+      "path": "skills/configuration-and-dotfile-surface/SKILL.md",
+      "tags": [
+        "discover",
+        "configuration",
+        "files"
+      ],
+      "meta_phase": "discover",
+      "sha256": "df16877dfaebfe321c4bef52279b7363897ef0030d16ec77a098d3292b124484"
+    },
+    {
+      "slug": "generated-artifact-scan",
+      "title": "Generated Artifact Scan",
+      "path": "skills/generated-artifact-scan/SKILL.md",
+      "tags": [
+        "discover",
+        "artifacts",
+        "build"
+      ],
+      "meta_phase": "discover",
+      "sha256": "0108e7b25eddb510c8a4cd86d429a3da1bb657be32a0792cb9f450804485c266"
+    },
+    {
+      "slug": "log-and-telemetry-surface-scan",
+      "title": "Log and Telemetry Surface Scan",
+      "path": "skills/log-and-telemetry-surface-scan/SKILL.md",
+      "tags": [
+        "discover",
+        "logs",
+        "telemetry"
+      ],
+      "meta_phase": "discover",
+      "sha256": "03c9fac24c56f5b84ed42e94cc94f71f0d9f90bb0118ffd65d04a09ea9b1386e"
+    },
+    {
+      "slug": "cloud-access-key-classification",
+      "title": "Cloud Access Key Classification",
+      "path": "skills/cloud-access-key-classification/SKILL.md",
+      "tags": [
+        "classify",
+        "cloud",
+        "credentials"
+      ],
+      "meta_phase": "classify",
+      "sha256": "78fe115bcffd3b1cf8cc37df58096dfb5e026f06967030314eea2f3b9105b84e"
+    },
+    {
+      "slug": "api-token-and-bearer-classification",
+      "title": "API Token and Bearer Classification",
+      "path": "skills/api-token-and-bearer-classification/SKILL.md",
+      "tags": [
+        "classify",
+        "tokens",
+        "authorization"
+      ],
+      "meta_phase": "classify",
+      "sha256": "7d51db0dea1132518168e0e0000deced591a64ad2b9b2bb3c0f863f9178f4230"
+    },
+    {
+      "slug": "private-key-material-classification",
+      "title": "Private Key Material Classification",
+      "path": "skills/private-key-material-classification/SKILL.md",
+      "tags": [
+        "classify",
+        "keys",
+        "cryptography"
+      ],
+      "meta_phase": "classify",
+      "sha256": "96aba17eedfa43cd9d76c9e4ecac81c3e41fee2e841c3053470fea781c7fca5c"
+    },
+    {
+      "slug": "password-and-passphrase-classification",
+      "title": "Password and Passphrase Classification",
+      "path": "skills/password-and-passphrase-classification/SKILL.md",
+      "tags": [
+        "classify",
+        "credentials",
+        "passwords"
+      ],
+      "meta_phase": "classify",
+      "sha256": "970309c54a8f31e5b6f05e7ac49fb0ef68684467692317ea30ba80a97722b5c5"
+    },
+    {
+      "slug": "connection-string-classification",
+      "title": "Connection String Classification",
+      "path": "skills/connection-string-classification/SKILL.md",
+      "tags": [
+        "classify",
+        "connection-strings",
+        "databases"
+      ],
+      "meta_phase": "classify",
+      "sha256": "63d8c11aecb1fb35a6bd0d7535d0452e440b6d062c569adfb4c0542b5040530b"
+    },
+    {
+      "slug": "jwt-and-session-token-classification",
+      "title": "JWT and Session Token Classification",
+      "path": "skills/jwt-and-session-token-classification/SKILL.md",
+      "tags": [
+        "classify",
+        "jwt",
+        "sessions"
+      ],
+      "meta_phase": "classify",
+      "sha256": "1c271a8d45015a41860c807719fb3de8e09fe5ee492b24f453847bdddb4774ec"
+    },
+    {
+      "slug": "personal-identifier-classification",
+      "title": "Personal Identifier Classification",
+      "path": "skills/personal-identifier-classification/SKILL.md",
+      "tags": [
+        "classify",
+        "personal-data",
+        "privacy"
+      ],
+      "meta_phase": "classify",
+      "sha256": "e22a360f6a2e5a29b8928c5a0eb0831076491bdf22e4e7be2dfdcbc92adf634e"
+    },
+    {
+      "slug": "payment-and-financial-record-classification",
+      "title": "Payment and Financial Record Classification",
+      "path": "skills/payment-and-financial-record-classification/SKILL.md",
+      "tags": [
+        "classify",
+        "financial",
+        "personal-data"
+      ],
+      "meta_phase": "classify",
+      "sha256": "095bacc4d94b396375b3c51bff1485b6d83e551eeacc0547ddb4ace7643cee34"
+    },
+    {
+      "slug": "email-address-corpus-classification",
+      "title": "Email Address Corpus Classification",
+      "path": "skills/email-address-corpus-classification/SKILL.md",
+      "tags": [
+        "classify",
+        "personal-data",
+        "contacts"
+      ],
+      "meta_phase": "classify",
+      "sha256": "b219d70e3b0f705291ded1797cd00a1903819f2f1ef688143bd856cb9818f185"
+    },
+    {
+      "slug": "internal-infrastructure-reference-classification",
+      "title": "Internal Infrastructure Reference Classification",
+      "path": "skills/internal-infrastructure-reference-classification/SKILL.md",
+      "tags": [
+        "classify",
+        "infrastructure",
+        "disclosure"
+      ],
+      "meta_phase": "classify",
+      "sha256": "f8b66f22ea1578b93bde17c7d61be08d1e6c9afd318c95c2e73e35f56fd357a4"
+    },
+    {
+      "slug": "signed-url-and-access-grant-classification",
+      "title": "Signed URL and Access Grant Classification",
+      "path": "skills/signed-url-and-access-grant-classification/SKILL.md",
+      "tags": [
+        "classify",
+        "signed-urls",
+        "access"
+      ],
+      "meta_phase": "classify",
+      "sha256": "50ecc2c01fe38c52943db24892bc8e7a96f1abff27c810bc4afc2bc1ea91a41e"
+    },
+    {
+      "slug": "webhook-and-signing-secret-classification",
+      "title": "Webhook and Signing Secret Classification",
+      "path": "skills/webhook-and-signing-secret-classification/SKILL.md",
+      "tags": [
+        "classify",
+        "webhooks",
+        "secrets"
+      ],
+      "meta_phase": "classify",
+      "sha256": "b7307fd7d7f327fce111ba3af1e3363e8d033233d5cbc4931ebe668744ff8d2b"
+    },
+    {
+      "slug": "oauth-client-credential-classification",
+      "title": "OAuth Client Credential Classification",
+      "path": "skills/oauth-client-credential-classification/SKILL.md",
+      "tags": [
+        "classify",
+        "oauth",
+        "credentials"
+      ],
+      "meta_phase": "classify",
+      "sha256": "22b9fee23590f873cd31e02527a16f80c5f1bbef2e828f55f1077a0738dcc68d"
+    },
+    {
+      "slug": "archive-and-backup-content-classification",
+      "title": "Archive and Backup Content Classification",
+      "path": "skills/archive-and-backup-content-classification/SKILL.md",
+      "tags": [
+        "classify",
+        "archives",
+        "coverage"
+      ],
+      "meta_phase": "classify",
+      "sha256": "3f7516a111f68a87babd71f8098ac5f591e08cba4492a24cdbfc1a8c5d858f6b"
+    },
+    {
+      "slug": "dataset-export-classification",
+      "title": "Dataset Export Classification",
+      "path": "skills/dataset-export-classification/SKILL.md",
+      "tags": [
+        "classify",
+        "exports",
+        "lineage"
+      ],
+      "meta_phase": "classify",
+      "sha256": "ae43e170d99d3d7e48630b6738212ab9c2da9e7b24b48714853e0d080fda4184"
+    },
+    {
+      "slug": "format-plus-context-corroboration",
+      "title": "Format Plus Context Corroboration",
+      "path": "skills/format-plus-context-corroboration/SKILL.md",
+      "tags": [
+        "confirm",
+        "precision",
+        "detection"
+      ],
+      "meta_phase": "confirm",
+      "sha256": "2b360cfa6563a665e4aa0c78b1922874ba96baae6ea909b2e5a1c0b6a3b21934"
+    },
+    {
+      "slug": "near-miss-false-positive-taxonomy",
+      "title": "Near-Miss False-Positive Taxonomy",
+      "path": "skills/near-miss-false-positive-taxonomy/SKILL.md",
+      "tags": [
+        "confirm",
+        "false-positives",
+        "precision"
+      ],
+      "meta_phase": "confirm",
+      "sha256": "d0b8143ec23178f89ad86d66e7cbab27172155f209b5e0ff676bf83194c185fc"
+    },
+    {
+      "slug": "deduplication-across-copies",
+      "title": "Deduplication Across Copies",
+      "path": "skills/deduplication-across-copies/SKILL.md",
+      "tags": [
+        "confirm",
+        "deduplication",
+        "reporting"
+      ],
+      "meta_phase": "confirm",
+      "sha256": "ddca922a95300c483e22d4b0b48d77fc1a38eb3df8e32c21310e875c112e294a"
+    },
+    {
+      "slug": "false-positive-rate-sampling",
+      "title": "False-Positive Rate Sampling",
+      "path": "skills/false-positive-rate-sampling/SKILL.md",
+      "tags": [
+        "confirm",
+        "precision",
+        "measurement"
+      ],
+      "meta_phase": "confirm",
+      "sha256": "346c5e407fc3c7868885d7a38c39370e30d8758cbd3847c6484feae14ca0fbfb"
+    },
+    {
+      "slug": "value-never-used-verification",
+      "title": "Value Never Used Verification",
+      "path": "skills/value-never-used-verification/SKILL.md",
+      "tags": [
+        "confirm",
+        "ethics",
+        "method"
+      ],
+      "meta_phase": "confirm",
+      "sha256": "ed730bb1556b864a3e3a1eb1b40201e7c438d4572f645b5885e707b5cf4dfa58"
+    },
+    {
+      "slug": "temporal-staleness-assessment",
+      "title": "Temporal Staleness Assessment",
+      "path": "skills/temporal-staleness-assessment/SKILL.md",
+      "tags": [
+        "confirm",
+        "staleness",
+        "triage"
+      ],
+      "meta_phase": "confirm",
+      "sha256": "3d7263d2f255bc1c56a55169feabe313037b123cad02ed8294250c233e21cd39"
+    },
+    {
+      "slug": "severity-ranking-by-class-and-reach",
+      "title": "Severity Ranking by Class and Reach",
+      "path": "skills/severity-ranking-by-class-and-reach/SKILL.md",
+      "tags": [
+        "confirm",
+        "severity",
+        "triage"
+      ],
+      "meta_phase": "confirm",
+      "sha256": "7a559a211ce70157d101e6b9895f11d9a380450c0e5ee8ead63620090934ae1f"
+    },
+    {
+      "slug": "independent-second-reader-review",
+      "title": "Independent Second Reader Review",
+      "path": "skills/independent-second-reader-review/SKILL.md",
+      "tags": [
+        "confirm",
+        "review",
+        "precision"
+      ],
+      "meta_phase": "confirm",
+      "sha256": "3bd518802227184a383828ac3e4ec4b055e62fd1eddfd24c998b011d273c0dc0"
+    },
+    {
+      "slug": "remediation-readiness-check",
+      "title": "Remediation Readiness Check",
+      "path": "skills/remediation-readiness-check/SKILL.md",
+      "tags": [
+        "confirm",
+        "handover",
+        "remediation"
+      ],
+      "meta_phase": "confirm",
+      "sha256": "505c8d9429ea09f3dd7b8d5a4efd64d9c78f2e2fb2b4920a46a8a7165d581a25"
+    },
+    {
+      "slug": "rotation-before-publication",
+      "title": "Rotation Before Publication",
+      "path": "skills/rotation-before-publication/SKILL.md",
+      "tags": [
+        "harden",
+        "rotation",
+        "disclosure"
+      ],
+      "meta_phase": "harden",
+      "sha256": "5fdf2928150132e8b4bbd48b1162a4e8640ed7680f2380b9a4628c09c3fb6361"
+    },
+    {
+      "slug": "history-rewrite-and-verification",
+      "title": "History Rewrite and Verification",
+      "path": "skills/history-rewrite-and-verification/SKILL.md",
+      "tags": [
+        "harden",
+        "history",
+        "git"
+      ],
+      "meta_phase": "harden",
+      "sha256": "6f86f78b90586c852ab24db3dc258dd440edcd3e3d5a403350ef63847f3a80df"
+    },
+    {
+      "slug": "exclusion-and-ignore-hygiene",
+      "title": "Exclusion and Ignore Hygiene",
+      "path": "skills/exclusion-and-ignore-hygiene/SKILL.md",
+      "tags": [
+        "harden",
+        "configuration",
+        "coverage"
+      ],
+      "meta_phase": "harden",
+      "sha256": "ce81f81bcd9fded6c7261797ddc6e203603f664eb1c70c877450bd3a30f259c1"
+    },
+    {
+      "slug": "pre-commit-and-cicd-secret-gate",
+      "title": "Pre-Commit and CICd Secret Gate",
+      "path": "skills/pre-commit-and-cicd-secret-gate/SKILL.md",
+      "tags": [
+        "harden",
+        "prevention",
+        "pipeline"
+      ],
+      "meta_phase": "harden",
+      "sha256": "b5607c2322ed6426812bbd38ffebc1328f77eccb8c1f2a80a9542677d1fc9349"
+    },
+    {
+      "slug": "centralized-secret-storage-migration",
+      "title": "Centralized Secret Storage Migration",
+      "path": "skills/centralized-secret-storage-migration/SKILL.md",
+      "tags": [
+        "harden",
+        "secrets-management",
+        "migration"
+      ],
+      "meta_phase": "harden",
+      "sha256": "4b35cfce0cba9df8160a0419073d55b2286b132b5b3917e8b5e7f50f75ad335b"
+    },
+    {
+      "slug": "logging-redaction-at-source",
+      "title": "Logging Redaction at Source",
+      "path": "skills/logging-redaction-at-source/SKILL.md",
+      "tags": [
+        "harden",
+        "logging",
+        "redaction"
+      ],
+      "meta_phase": "harden",
+      "sha256": "38c3355f5b771c8b0b553137b86d52477f5afce802719e85094979e3558cb907"
+    },
+    {
+      "slug": "continuous-scan-and-drift-monitoring",
+      "title": "Continuous Scan and Drift Monitoring",
+      "path": "skills/continuous-scan-and-drift-monitoring/SKILL.md",
+      "tags": [
+        "harden",
+        "monitoring",
+        "regression"
+      ],
+      "meta_phase": "harden",
+      "sha256": "3a2a06ff7825369867e1f25525b9581896c6a6d6de7537dcdbd8000474f87100"
+    },
+    {
+      "slug": "exposure-finding-evidence-pack",
+      "title": "Exposure Finding Evidence Pack",
+      "path": "skills/exposure-finding-evidence-pack/SKILL.md",
+      "tags": [
+        "document",
+        "evidence",
+        "reporting"
+      ],
+      "meta_phase": "document",
+      "sha256": "bc32c6963bd1b8a6322d285ffc24dc827669109e3d60cb62318e38503715b40d"
+    },
+    {
+      "slug": "redaction-for-shareable-reporting",
+      "title": "Redaction for Shareable Reporting",
+      "path": "skills/redaction-for-shareable-reporting/SKILL.md",
+      "tags": [
+        "document",
+        "redaction",
+        "handling"
+      ],
+      "meta_phase": "document",
+      "sha256": "bb9c69ac5523f70569f7bc931155048d5713d3f12d908e061ac62653d60f4c40"
+    },
+    {
+      "slug": "remediation-order-by-copy",
+      "title": "Remediation Order by Copy",
+      "path": "skills/remediation-order-by-copy/SKILL.md",
+      "tags": [
+        "document",
+        "remediation",
+        "sequencing"
+      ],
+      "meta_phase": "document",
+      "sha256": "4f73347f4fce1c33e5483c234dc6f41de4a3f3069112054627db3025adc09113"
+    },
+    {
+      "slug": "post-closure-verification-record",
+      "title": "Post-Closure Verification Record",
+      "path": "skills/post-closure-verification-record/SKILL.md",
+      "tags": [
+        "document",
+        "verification",
+        "closure"
+      ],
+      "meta_phase": "document",
+      "sha256": "e798283185de0f141e8d203e48e92d6af442686a2523a6d28c00e40975d3d39e"
+    }
+  ]
+}

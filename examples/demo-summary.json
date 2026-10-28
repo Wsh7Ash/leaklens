@@ -1,0 +1,18 @@
+{
+  "target": "config-tree assessment",
+  "classes": ["secret", "personal", "internal"],
+  "locations": ["src/**", "config/**", "build/**", "history"],
+  "reach": ["tracked", "published"],
+  "tools": ["local scanner", "no network"],
+  "observed": {
+    "candidates": 418,
+    "accepted": 18,
+    "precision_sample": "26 of 30",
+    "value_used": false
+  },
+  "concerns": [
+    "does an ignore rule hide build output from the scan",
+    "which findings still exist in tracked history",
+    "where does the export copy live after it leaves the system"
+  ]
+}
